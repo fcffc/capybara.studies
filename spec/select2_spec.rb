@@ -17,9 +17,28 @@ describe 'Select2', :select2 do
         end
     end
 
-    describe('multiple') do
+    describe('multiple', :mult) do
         before(:each) do
-            visit '/apps/select2/multi.html'
+            visit 'http://training-wheels-protocol.herokuapp.com/apps/select2/multi.html'
+        end
+
+        def selecione(ator)
+            find('.select2-selection--multiple').click
+            find('.select2-search__field').set ator
+            find('.select2-results__option').click
+        end
+
+        it 'seleciona atores' do
+            # Forma 1
+            # selecione('Jim Carrey')
+            # selecione('Owen Wilson')
+
+            # Forma 2
+            atores = ['Jim Carrey', 'Owen Wilson', 'Kevin James']
+            atores.each do |a|
+                selecione(a)
+            end
+            sleep 5
         end
     end
 end
