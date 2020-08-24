@@ -11,7 +11,7 @@ describe 'Mouse Houver', :hovers do
     end
 
     it 'quando passo o mouse sobre o Pantera Negra' do
-        find('img[alt="Pantera Negra"]').hover
+        find('img[alt^=Pantera]').hover # ^= -> começa com / $= -> termina com / *= -> contem
 
         expect(page).to have_content 'Nome: Pantera Negra'
     end
