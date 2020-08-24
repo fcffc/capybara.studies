@@ -1,4 +1,4 @@
-describe 'Forms' do
+describe 'Login form' do
     
     it 'login com sucesso' do
         visit 'http://training-wheels-protocol.herokuapp.com/login'
