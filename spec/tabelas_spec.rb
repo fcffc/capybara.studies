@@ -1,7 +1,7 @@
-describe 'Tabelas', :tabs do
+describe 'Tabelas', :tabs, :smoke do
     
     before(:each) do
-        visit 'http://training-wheels-protocol.herokuapp.com/tables'
+        visit '/tables'
     end
 
     it 'pega o Tony Stark na lista' do
