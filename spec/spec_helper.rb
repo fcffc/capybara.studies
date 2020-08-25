@@ -13,7 +13,7 @@ RSpec.configure do |config|
   end
 
   config.before(:example) do
-    page.current_window.resize_to(1920, 1080)
+    page.current_window.resize_to(1280, 800)
   end
 
   config.after(:example) do |e|

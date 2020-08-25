@@ -38,6 +38,7 @@ describe 'Tabelas', :tabs, :smoke do
 
         msg = page.driver.browser.switch_to.alert.text
         expect(msg).to eql 'Chris Evans foi selecionado para remoção!'
+        page.driver.browser.switch_to.alert.accept # Corrige falha de screenshots do alert
     end
 
     it 'ddeve selecionar Cris Evans para edição' do
@@ -46,5 +47,6 @@ describe 'Tabelas', :tabs, :smoke do
 
         msg = page.driver.browser.switch_to.alert.text
         expect(msg).to eql 'Chris Evans foi selecionado para edição!'
+        page.driver.browser.switch_to.alert.accept # Corrige falha de screenshots do alert
     end
 end
