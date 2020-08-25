@@ -20,7 +20,7 @@ RSpec.configure do |config|
     nome = e.description.gsub(/[^A-Za-z0-9 ]/, '').tr(' ', '_')
     # if e.exeption condição para obter evidência somente quando o teste falha
     # para todos os cenários, tire o if
-    page.save_screenshot('log/' + nome + '.png')  if e.exception
+    page.save_screenshot('log/' + nome + '.png') if e.exception
   end
 
   config.shared_context_metadata_behavior = :apply_to_host_groups
